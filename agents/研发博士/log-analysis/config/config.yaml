@@ -1,0 +1,57 @@
+# 日志智能分析项目配置
+
+## LLM 配置
+llm:
+  provider: minimax
+  model: MiniMax-M2.5
+  api_key: sk-cp-YcJ8au5v3EvMpd2H0MMAMbNCDE4hrfObi5Kn9ySqFg0NLfZ8epInnpfThQY89Qp6C9Uj1Vo1IRcvVMM5bxkgtW6WpLPJIc0uU-2_M5Mb4aFrlzv86TVIU0c
+  base_url: https://api.minimax.chat/v1
+  region: cn
+
+## 日志配置
+log:
+  # 日志格式：file (文件) / json / csv
+  format: file
+  # 日志目录路径
+  path: G:/日志智能分析
+  # 编码格式
+  encoding: utf-8
+  # 文件扩展名
+  extension: .log
+
+## 分析配置
+analysis:
+  # 并发分析线程数
+  max_workers: 4
+  # 单次分析最大日志行数
+  max_lines: 100000
+  # 错误级别关键字
+  error_keywords:
+    - ERROR
+    - FATAL
+    - EXCEPTION
+    - CRITICAL
+    - ERR_
+    - FAIL
+  # 警告级别关键字
+  warning_keywords:
+    - WARNING
+    - WARN
+    - trap
+    - overflow
+  # 关键事件关键字（需要分析的INFO事件）
+  event_keywords:
+    - HEARTBEAT
+    - MAC
+    - OSPF
+    - TTDP
+    - BFD
+    - port
+    - vlan
+
+## 输出配置
+output:
+  # 分析报告格式
+  report_format: markdown
+  # 报告输出目录
+  report_path: ./reports

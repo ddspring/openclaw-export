@@ -1,0 +1,63 @@
+# OpenClaw 配置模板
+# 复制为 config.toml 并修改以下配置
+
+# ========== 账号配置 ==========
+# 邮箱账号（IMAP/SMTP）
+# 注意：密码应使用应用专用密码，不要使用登录密码
+
+# [[accounts]]
+# name = "myaccount"
+# email = "your@email.com"
+# imap.host = "imap.example.com"
+# imap.port = 993
+# imap.username = "your@email.com"
+# imap.password = "your-app-password"
+# smtp.host = "smtp.example.com"
+# smtp.port = 587
+# smtp.username = "your@email.com"
+# smtp.password = "your-app-password"
+
+# ========== AI 模型配置 ==========
+# 支持：zhipu (智谱), openai, anthropic, minimax 等
+
+# [providers.zhipu]
+# api_key = "your-zhipu-api-key"
+# base_url = "https://open.bigmodel.cn/api/paas/v4/"
+
+# [providers.openai]
+# api_key = "your-openai-api-key"
+
+# [providers.minimax]
+# api_key = "your-minimax-api-key"
+
+# ========== 频道配置 ==========
+# 飞书、Telegram、Discord、WhatsApp 等
+
+# [channels.feishu]
+# app_id = "your-feishu-app-id"
+# app_secret = "your-feishu-app-secret"
+
+# [channels.telegram]
+# bot_token = "your-telegram-bot-token"
+
+# ========== 技能配置 ==========
+# 技能目录，默认 ~/.openclaw/skills
+
+# [skills]
+# directory = "~/.openclaw/skills"
+
+# ========== Agent 配置 ==========
+# 自定义 Agent
+
+# [[agents]]
+# name = "我的助手"
+# model = "zhipu"
+# prompt = "你是一个有用的助手..."
+
+# ========== 安全设置 ==========
+# 限制 AI 能执行的命令
+
+# [security]
+# allowed_commands = ["git", "python", "node"]
+# blocked_paths = ["C:\\Windows", "/etc"]
+# confirm_dangerous = true
