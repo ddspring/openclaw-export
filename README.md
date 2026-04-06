@@ -16,11 +16,12 @@ openclaw-export/
 │   ├── playwright-scraper-skill/
 │   └── summary-report/
 └── agents/                # Agent 配置
-    ├── 产品经理/
-    ├── 文案写手/
-    ├── 运营专员/
-    ├── 研究分析师/
-    └── 总结助手/
+    ├── 产品军师/
+    ├── 参谋官/
+    ├── 政经助理/
+    ├── 研发博士/
+    ├── 管家/
+    └── 质量总监/
 ```
 
 ## 🚀 快速导入
@@ -56,6 +57,24 @@ openclaw skills install ./skills/github
 | pdf-gen | Markdown 转 PDF |
 | playwright-scraper-skill | 网页爬虫 |
 | summary-report | 工作报告生成 |
+
+## 🤖 数字团队成员
+
+项目预配置了 6 位数字团队成员：
+
+| 成员 | ID | 擅长领域 |
+|------|----|----------|
+| 产品军师 | chanpin-junshi | 产品规划、需求分析 |
+| 参谋官 | canmou-guan | PPT、演示、策略汇报 |
+| 政经助理 | zhengjing-zhuli | 政经资讯、新闻、行业趋势 |
+| 研发博士 | yanfa-boshi | 技术研究、代码、架构 |
+| 管家 | guanjia | 日程、提醒、整理、进度跟踪 |
+| 质量总监 | zhiliang-zongjian | 质量审查、评分、触发返工 |
+
+**质量总监工作流**：
+- 自动审查研发博士、产品军师、参谋官、管家的输出
+- 评分低于 80 分则触发返工，最多返工 3 次
+- 3 次返工后仍不通过则上报人工处理
 
 ## 🔧 自行部署
 

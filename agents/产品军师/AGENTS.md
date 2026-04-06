@@ -5,6 +5,7 @@
 本 Agent 已配置以下 Skills：
 - **product-intelligence**: 行业情报（5维度分析）
 - **product-planning**: 产品规划（路线图+需求管理）
+- **idea-validator**: 创业点子验证（新技术/新方向可行性评估）
 
 ## 启动流程
 
