@@ -1,0 +1,11 @@
+{
+  "hosts": {
+    "tegra": {
+      "host": "192.168.1.4",
+      "port": 22,
+      "user": "root",
+      "password": "1234",
+      "note": "NVIDIA Tegra Ubuntu 设备（ARM64）"
+    }
+  }
+}
